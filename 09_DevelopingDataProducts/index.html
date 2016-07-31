@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MPG Analysis</title>
+  <meta charset="utf-8">
+  <meta name="description" content="MPG Analysis">
+  <meta name="author" content="Dan Wolff">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>MPG Analysis</h1>
+    <h2>Expected MPG based on car characterisitcs</h2>
+    <p>Dan Wolff<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>About the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Written using the R package Shiny</li>
+<li>Leverages the mtcars dataset</li>
+<li>Intended for people who are buying a car</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Benefits of using the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Helps the user select the right car in order to save on gas</li>
+<li>Ease to use</li>
+<li>The app is interactive!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to use the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Select a car feature</li>
+<li>View the output (correlation between mpg and the selected feature)</li>
+<li>Repeat steps 1 and 2</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Example output from the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(datasets)
+mpgData &lt;- mtcars
+mpgPlot &lt;- boxplot(mpg~am, data = mpgData)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<pre><code class="r">mpgPlot
+</code></pre>
+
+<pre><code>## $stats
+##       [,1] [,2]
+## [1,] 10.40 15.0
+## [2,] 14.95 21.0
+## [3,] 17.30 22.8
+## [4,] 19.20 30.4
+## [5,] 24.40 33.9
+## 
+## $n
+## [1] 19 13
+## 
+## $conf
+##          [,1]    [,2]
+## [1,] 15.75947 18.6808
+## [2,] 18.84053 26.9192
+## 
+## $out
+## numeric(0)
+## 
+## $group
+## numeric(0)
+## 
+## $names
+## [1] &quot;0&quot; &quot;1&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Next steps: how to obtain the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Access the application on the shiny server</li>
+<li>View the code on GitHub</li>
+<li>Send me your feedback!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='About the app'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Benefits of using the app'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How to use the app'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example output from the app'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Next steps: how to obtain the app'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

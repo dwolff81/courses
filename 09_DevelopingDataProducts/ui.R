@@ -1,24 +1,19 @@
 library(shiny)
 
 shinyUI(pageWithSidebar(
-    
-    headerPanel("MPGs by Number of Cylinders"),
+    headerPanel("Miles Per Gallon"),
     
     sidebarPanel(
-        selectInput("selectedType", "Please Select Number of Cylinders:",
-                    list("4 Cyl",
-                         "6 Cyl",
-                         "8 Cyl"
-                         ))
-        
+        selectInput("variable", "Variable:",
+            list("Cylinders" = "cyl",
+                 "Transmission" = "am",
+                 "Gears" = "gear")),
+        checkboxInput("outliers", "Show outliers", FALSE)
     ),
     
     mainPanel(
-        
         h3(textOutput("caption")),
         
-        tableOutput("MPGs")
-        
-    )
-    
-))    
+        plotOutput("mpgPlot")
+        )
+))
